@@ -6,12 +6,10 @@
 
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
-def Pow(a, b):
-    if (b == 1):
-        return (a)
-    if (b != 1):
-        return (a * Pow(a, b - 1))
-a = int(input("Input A "))
-b = int(input("Input B "))
-print(Pow(a, b))
-        
+def power(a, b):
+    if b == 0:
+        return 1
+    return power(a, b - 1) * a
+a = int(input())
+b = int(input())
+print(power(a, b))
